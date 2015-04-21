@@ -25,6 +25,8 @@ public class PuzzleWindow extends JFrame {
 				try {
 					PuzzleWindow frame = new PuzzleWindow();
 					frame.setVisible(true);
+					Thread.sleep(2500);
+					frame.puzzleSurface.randomize();
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -46,6 +48,7 @@ public class PuzzleWindow extends JFrame {
 		
 		puzzleSurface = new PuzzleSurface();
 		contentPane.add(puzzleSurface, BorderLayout.CENTER);
+		repaint();
 	}
 
 }
